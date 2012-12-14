@@ -1,0 +1,9 @@
+<div class="row">
+<% @posts.each do |post| %>
+	  <div class="span4" style="float: left;">
+		<%= link_to image_tag(post.image.url(:resize)), post.image.url %>
+		<%= post.content %>
+		<%= post.user_id %>
+		</div>
+<% end %>
+</div>

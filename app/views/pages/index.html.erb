@@ -1,7 +1,7 @@
 <div class="row">
 <% @posts.each do |post| %>
-	  <div class="span4" style="float: left;">
-		<%= link_to image_tag(post.image.url(:resize)), post.image.url %>
+	  <div class="span4" style="float: left; padding: 10px;">
+		<%= link_to image_tag(post.image.url(:resize), :class => "img-polaroid"), post.image.url %>
 		<%= post.content %>
 		<%= post.user_id %>
 		</div>

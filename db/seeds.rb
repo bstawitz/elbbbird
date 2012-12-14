@@ -7,6 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-posts = Post.create([{ content: 'sample content', image: '/system/posts/images/000/000/014/resize/Screen_Shot_2012-12-13_at_1.12.07_AM.png'}, { content: 'sample content'}, { content: 'sample content'}, { content: 'sample content'}])
-
-users = User.create([{ username: "username", email: "sample@email.com"}, { username: "username", email: "sample@email.com"}, { username: "username", email: "sample@email.com"}, { username: "username", email: "sample@email.com"}])
+posts = Post.create([{ content: 'sample content'}, { content: 'sample content'}, { content: 'sample content'}, { content: 'sample content'}])

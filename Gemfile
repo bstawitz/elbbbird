@@ -7,7 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 
-gem 'authlogic'
+gem 'devise'
 
 gem "paperclip", "~> 3.0"
 

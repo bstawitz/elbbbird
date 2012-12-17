@@ -9,6 +9,7 @@
 			<div class="like<%= post.id %>" data-toggle="button">
 				<%= render 'likes/like_button', :post => @post %>
 			</div>
+			Likes:<%= post.likes.count %>
 		</div>
 	</div>
 <% end %>

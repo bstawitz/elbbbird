@@ -1,11 +1,15 @@
 <div class="thumbnails">
 <% @posts.each do |post| %>
-	  <div class="span4" style="float: left; margin: 20px; text-align: center;">
-			<div class="well">
-				<%= link_to image_tag(post.image.url(:resize), :class => "img-polaroid"), post.image.url %>
-				<p style="font-size: 14px; margin-top: 10px;"><strong><%= post.content %></strong></p>
-				<p><%= post.user_id %>
+	<% @post = post %>
+  <div class="span4" style="float: left; margin: 20px; text-align: center;">
+		<div class="well">
+			<%= link_to image_tag(post.image.url(:resize), :class => "img-polaroid"), post.image.url %>
+			<p style="font-size: 14px; margin-top: 10px;"><strong><%= post.content %></strong></p>
+			<p><%= post.user_id %>
+			<div class="like<%= post.id %>" data-toggle="button">
+				<%= render 'likes/like_button', :post => @post %>
 			</div>
 		</div>
+	</div>
 <% end %>
 </div>

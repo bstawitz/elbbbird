@@ -5,7 +5,7 @@
 		<div class="well">
 			<%= link_to image_tag(post.image.url(:resize), :class => "img-polaroid"), post.image.url %>
 			<p style="font-size: 14px; margin-top: 10px;"><strong><%= post.content %></strong></p>
-			<p><%= post.user_id %>
+			<p><%= post.user.email %>
 			<div class="like<%= post.id %>" data-toggle="button">
 				<%= render 'likes/like_button', :post => @post %>
 			</div>

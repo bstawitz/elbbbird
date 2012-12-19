@@ -3,8 +3,9 @@ class Post < ActiveRecord::Base
   has_many :likes
   attr_accessible :content, :user_id, :image
   has_attached_file :image, 
-      :styles => { :resize => "400x300>" },
-      :storage => :s3,
-      :s3_credentials => "#{Rails.root}/config/s3.yml",
-      :path => "/:style/:id/:filename"
+      :styles => { :resize => "400x300>" }
+      # ,
+      # :storage => :s3,
+      # :s3_credentials => "#{Rails.root}/config/s3.yml",
+      # :path => "/:style/:id/:filename"
 end

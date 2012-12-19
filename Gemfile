@@ -1,11 +1,19 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
-
+gem 'aws-s3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
   gem 'sqlite3'
+end
+
+gem "rspec-rails", :group => [:test, :development]
+group :test do
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "guard-rspec"
+  gem "rb-fsevent", "~> 0.9.2"
 end
 
 group :production do 

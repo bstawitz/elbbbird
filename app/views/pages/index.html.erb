@@ -6,10 +6,14 @@
 			<%= link_to image_tag(post.image.url(:resize), :class => "img-polaroid"), post.image.url %>
 			<p style="font-size: 14px; margin-top: 10px;"><strong><%= post.content %></strong></p>
 			<p><%= post.user.email %>
-			<div class="like<%= post.id %>" data-toggle="button">
-				<%= render 'likes/like_button', :post => @post %>
-			</div>
-			Likes:<%= post.likes.count %>
+			<% unless current_user.nil? || post.user.id == current_user.id %>
+				<div class="like<%= post.id %>" data-toggle="button">
+					<%= render 'likes/like_button', :post => @post %>
+				</div>
+			<% else %>
+				<br />
+				Likes:<%= post.likes.count %>
+			<% end %>
 		</div>
 	</div>
 <% end %>
